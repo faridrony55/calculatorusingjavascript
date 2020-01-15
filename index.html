@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+     
+    <title>Calculator </title>
+
+    <style type="text/css">
+      body{
+            background: #24292d;
+      }
+      form{
+        overflow: hidden;
+      }
+      input[type="button"]{
+            display: block;
+    float: left;
+    width: 25%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #fff;
+      }
+      input{
+            font-size: 20px !important;
+      }
+      .btn-dark:hover { 
+    border: 1px solid #fff;
+}
+    </style>
+  </head>
+  <body>
+
+      <div class="container pt-5 mt-5">
+        <div class="row justify-content-center py-5">
+          <div class="col-sm-6">
+            <form name="calculator" class="shadow"> 
+              <input type="text" name="display" class="form-control bg-dark py-4 text-white" readonly >
+              <input type="button" name="one" value="1" onclick="ClickOne()" class="btn btn-dark">
+              <input type="button" name="two" value="2" onclick="ClickTwo()" class="btn btn-dark">
+              <input type="button" name="three" value="3" onclick="ClickThree()" class="btn btn-dark">
+              <input type="button" name="four" value="4" onclick="ClickFour()" class="btn btn-dark"><br>
+              <input type="button" name="five" value="5" onclick="ClickFive()" class="btn btn-dark">
+              <input type="button" name="six" value="6" onclick="ClickSix()" class="btn btn-dark">
+              <input type="button" name="seven" value="7" onclick="ClickSeven()" class="btn btn-dark">
+              <input type="button" name="eight" value="8" onclick="ClickEight()" class="btn btn-dark"><br>
+              <input type="button" name="nine" value="9" onclick="ClickNine()" class="btn btn-dark">
+              <input type="button" name="zero" value="0" onclick="ClickZero()" class="btn btn-dark">
+              <input type="button" name="sub" value="-" onclick="ClickSub()" class="btn btn-dark">
+              <input type="button" name="add" value="+" onclick="ClickAdd()" class="btn btn-dark"><br>
+              <input type="button" name="div" value="/" onclick="ClickDiv()" class="btn btn-dark">
+              <input type="button" name="mul" value="*" onclick="ClickMul()" class="btn btn-dark">
+              <input type="button" name="equal" value="Clr" onclick="ClickClr()" class="btn btn-dark">
+              <input type="button" name="equal" value="=" onclick="ClickEqual()" class="btn btn-dark">
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+      <script>
+         
+
+        function ClickOne(){
+          document.calculator.display.value += 1;
+        }
+        function ClickTwo(){
+          document.calculator.display.value += 2;
+        }
+        function ClickThree(){
+          document.calculator.display.value += 3;
+        }
+        function ClickFour(){
+          document.calculator.display.value += 4;
+        }
+        function ClickFive(){
+          document.calculator.display.value += 5;
+        }
+        function ClickSix(){
+          document.calculator.display.value += 6;
+        }
+        function ClickSeven(){
+          document.calculator.display.value += 7;
+        }
+        function ClickEight(){
+          document.calculator.display.value += 8;
+        }
+        function ClickNine(){
+          document.calculator.display.value += 9;
+        }
+        function ClickZero(){
+          document.calculator.display.value += 0;
+        }
+        function ClickSub(){
+          document.calculator.display.value += "-";
+        }
+        function ClickAdd(){
+          document.calculator.display.value += "+";
+        }
+        function ClickDiv(){
+          document.calculator.display.value += "/";
+        }
+        function ClickMul(){
+          document.calculator.display.value += "*";
+        }
+        function ClickEqual(){ 
+           document.calculator.display.value = eval(document.calculator.display.value);
+        }
+        function ClickClr(){
+          document.calculator.display.value = "";
+        }
+
+
+      </script>
+  
+  </body>
+</html>
